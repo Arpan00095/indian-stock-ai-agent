@@ -1,0 +1,161 @@
+# Advanced Intraday Trading System - Environment Variables
+# Copy this file to .env and fill in your actual API keys and settings
+
+# =============================================================================
+# CAPITAL & RISK MANAGEMENT
+# =============================================================================
+TRADING_CAPITAL=100000
+MAX_RISK_PER_TRADE=0.02
+MAX_DAILY_LOSS=0.05
+MAX_POSITIONS=5
+MAX_EXPOSURE=100000
+
+# =============================================================================
+# INTRADAY TRADING PARAMETERS
+# =============================================================================
+INTRADAY_MARGIN=0.20
+SQUARE_OFF_TIME=15:15
+MOMENTUM_THRESHOLD=0.5
+MEAN_REVERSION_THRESHOLD=0.8
+BREAKOUT_CONFIRMATION=3
+VOLUME_THRESHOLD=1000000
+
+# =============================================================================
+# STOP LOSS & TAKE PROFIT
+# =============================================================================
+DEFAULT_STOP_LOSS=0.02
+DEFAULT_TAKE_PROFIT=0.04
+TRAILING_STOP=0.01
+
+# =============================================================================
+# DHAN BROKER CONFIGURATION
+# =============================================================================
+DHAN_ENABLED=true
+DHAN_API_KEY=your_dhan_api_key_here
+DHAN_API_SECRET=your_dhan_api_secret_here
+DHAN_USER_ID=your_dhan_user_id
+DHAN_PASSWORD=your_dhan_password
+DHAN_TOTP_KEY=your_dhan_totp_key
+
+# =============================================================================
+# GROWW BROKER CONFIGURATION
+# =============================================================================
+GROWW_ENABLED=true
+GROWW_API_KEY=your_groww_api_key_here
+GROWW_API_SECRET=your_groww_api_secret_here
+GROWW_USER_ID=your_groww_user_id
+GROWW_PASSWORD=your_groww_password
+
+# =============================================================================
+# SENSIBULL BROKER CONFIGURATION
+# =============================================================================
+SENSIBULL_ENABLED=true
+SENSIBULL_API_KEY=your_sensibull_api_key_here
+SENSIBULL_API_SECRET=your_sensibull_api_secret_here
+SENSIBULL_USER_ID=your_sensibull_user_id
+SENSIBULL_PASSWORD=your_sensibull_password
+
+# =============================================================================
+# TECHNICAL INDICATORS
+# =============================================================================
+RSI_PERIOD=14
+RSI_OVERBOUGHT=70
+RSI_OVERSOLD=30
+MACD_FAST=12
+MACD_SLOW=26
+MACD_SIGNAL=9
+BOLLINGER_PERIOD=20
+BOLLINGER_STD=2
+EMA_SHORT=9
+EMA_LONG=21
+
+# =============================================================================
+# OI ANALYSIS PARAMETERS
+# =============================================================================
+PCR_THRESHOLD_HIGH=1.5
+PCR_THRESHOLD_LOW=0.5
+OI_BUILDUP_THRESHOLD=0.1
+MAX_PAIN_CALCULATION=true
+GAMMA_EXPOSURE_THRESHOLD=0.1
+
+# =============================================================================
+# ALERT SETTINGS
+# =============================================================================
+ENABLE_SMS=false
+ENABLE_EMAIL=false
+ENABLE_TELEGRAM=false
+ENABLE_PUSH=true
+ALERT_FREQUENCY=30
+
+# =============================================================================
+# TWILIO SMS CONFIGURATION
+# =============================================================================
+TWILIO_ACCOUNT_SID=your_twilio_account_sid
+TWILIO_AUTH_TOKEN=your_twilio_auth_token
+TWILIO_FROM_NUMBER=your_twilio_from_number
+TWILIO_TO_NUMBER=your_phone_number
+
+# =============================================================================
+# TELEGRAM CONFIGURATION
+# =============================================================================
+TELEGRAM_BOT_TOKEN=your_telegram_bot_token
+TELEGRAM_CHAT_ID=your_telegram_chat_id
+
+# =============================================================================
+# EMAIL CONFIGURATION
+# =============================================================================
+SMTP_SERVER=smtp.gmail.com
+SMTP_PORT=587
+EMAIL_ADDRESS=your_email@gmail.com
+EMAIL_PASSWORD=your_email_app_password
+
+# =============================================================================
+# DATABASE SETTINGS
+# =============================================================================
+DATABASE_TYPE=sqlite
+DATABASE_URL=sqlite:///trading_data.db
+DATABASE_BACKUP=true
+BACKUP_FREQUENCY=24
+
+# =============================================================================
+# LOGGING SETTINGS
+# =============================================================================
+LOG_LEVEL=INFO
+LOG_FILE=trading_engine.log
+LOG_MAX_SIZE=10
+LOG_BACKUP_COUNT=5
+
+# =============================================================================
+# PERFORMANCE SETTINGS
+# =============================================================================
+ENABLE_PROFILING=false
+CACHE_ENABLED=true
+CACHE_TTL=300
+
+# =============================================================================
+# MARKET DATA SETTINGS
+# =============================================================================
+MARKET_DATA_PROVIDER=yfinance
+MARKET_DATA_FREQUENCY=1
+
+# =============================================================================
+# WEBHOOK SETTINGS
+# =============================================================================
+WEBHOOK_SECRET=your_webhook_secret_here
+
+# =============================================================================
+# ALPHA VANTAGE (Alternative Market Data)
+# =============================================================================
+ALPHA_VANTAGE_API_KEY=your_alpha_vantage_api_key_here
+
+# =============================================================================
+# NOTES & INSTRUCTIONS
+# =============================================================================
+# 1. Replace all "your_*_here" values with your actual API keys and credentials
+# 2. Keep this file secure and never commit it to version control
+# 3. For Gmail, use App Password instead of regular password
+# 4. Test each broker connection before running live trading
+# 5. Start with small capital and gradually increase
+# 6. Monitor logs regularly for any issues
+# 7. Set up proper backup for trading data
+# 8. Use strong passwords and enable 2FA where possible
