@@ -62,6 +62,12 @@ def run_web_interface():
         subprocess.check_call([sys.executable, "-m", "pip", "install", "streamlit"])
         run_web_interface()
 
+def run_streamlit_app():
+    """Direct function to run the Streamlit app - used by Streamlit Cloud"""
+    from trading_agent import IndianStockTradingAgent
+    agent = IndianStockTradingAgent()
+    agent.run_streamlit_app()
+
 def run_cli_interface():
     """Run the command line interface"""
     print("🇮🇳 Indian Stock Market AI Agent - CLI Mode")
